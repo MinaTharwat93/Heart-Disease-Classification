@@ -30,11 +30,11 @@ class Handle_outlier_lb_ub:
 
 # Load the pre-trained model
 try:
-    with open('D:\\Epsilon Ai\\Heart_Disease_Project\\models\\svm_pipeline_model.pkl', 'rb') as file:
+    with open('https://github.com/MinaTharwat93/Heart-Disease-Classification/blob/main/models/svm_pipeline_model.pkl', 'rb') as file:
         model = pickle.load(file)
     st.sidebar.success("Model loaded successfully!")
 except FileNotFoundError:
-    st.sidebar.error("Model file 'D:\\Epsilon Ai\\Heart_Disease_Project\\models\\svm_pipeline_model.pkl' not found. Please train and save the model first.")
+    st.sidebar.error("Model file 'https://github.com/MinaTharwat93/Heart-Disease-Classification/blob/main/models/svm_pipeline_model.pkl' not found. Please train and save the model first.")
     st.stop()
 except Exception as e:
     st.sidebar.error(f"Error loading model: {str(e)}")
@@ -42,7 +42,7 @@ except Exception as e:
 
 # Load the original dataset
 try:
-    df = pd.read_csv(r'D:\Epsilon Ai\Heart_Disease_Project\data\heart_disease.csv')
+    df = pd.read_csv(r'https://github.com/MinaTharwat93/Heart-Disease-Classification/blob/main/data/heart_disease.csv')
     # Verify that 'num' column exists and contains valid values
     if 'num' not in df.columns or df['num'].isnull().all():
         st.error("The dataset is missing the 'num' column or contains only NaN values. Please check the data.")
@@ -51,7 +51,7 @@ try:
     # Convert 'num' to binary: 0 if 0, 1 if > 0
     df['num_binary'] = (df['num'] > 0).astype(int)
 except FileNotFoundError:
-    st.error("Dataset file 'D:\\Epsilon Ai\\Heart_Disease_Project\\data\\heart_disease.csv' not found. Please check the path and ensure the file exists.")
+    st.error("Dataset file 'https://github.com/MinaTharwat93/Heart-Disease-Classification/blob/main/data/heart_disease.csv' not found. Please check the path and ensure the file exists.")
     st.stop()
 except Exception as e:
     st.error(f"Error loading dataset: {str(e)}")
