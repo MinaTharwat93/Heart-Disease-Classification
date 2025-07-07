@@ -135,4 +135,3 @@ The "Heart Disease Prediction App" allows users to:
 2.  **Predict Heart Disease**: Input patient data through a user-friendly form. The app then uses the pre-trained SVM model to predict the probability of the patient having heart disease.
 
 The app provides a simple interface for both data exploration and real-time prediction based on the developed machine learning pipeline.
-```
