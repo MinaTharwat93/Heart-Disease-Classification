@@ -1,4 +1,3 @@
-```markdown
 # Heart Disease Classification Project
 
 This project focuses on classifying the presence of heart disease in patients using various machine learning models. It includes data preprocessing, model training, hyperparameter tuning, and a Streamlit web application for prediction and visualization.
